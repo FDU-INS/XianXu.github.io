@@ -1,18 +1,30 @@
+# The following is the order of the links in the header of the website.
+#
+# Changing the order here will adjust the order and you can also add additional
+# links. Removing a link prevents it from showing in the header, but does not
+# prevent it from being included in the site.
+
 main:
   - title: "个人简介"
     url: /CV
 
-  - title: "学术论文"
+  - title: "学术著作"
     url: /Publications
 
-  - title: "出版著作"
-    url: /Books
-
-  - title: "科研项目"
+  - title: "项目课题"
     url: /Research-Programme
-
-  - title: "大会发言"
+    
+  - title: "会议活动"
     url: /Event-Organization
 
-  - title: "联系方式"
-    url: /Contact
+  - title: "教学课程"
+    url: /Teaching
+
+  - title: "团队成员"
+    url: /Team-Members
+
+  - title: "English"
+    url: /en  # 新增英文页面链接
+  
+  - title: "Deutsch"
+    url: /de  # 新增德语页面链接
