@@ -12,9 +12,9 @@ title                    : "许闲"
 title_separator          : "-"
 name                     : &name ""
 description              : &description "personal description"
-url                      : https://huanhongxin.github.io/XianXu.github.io/ # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
-baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "academicpages/academicpages.github.io"
+url                      : "https://huanhongxin.github.io"
+baseurl                  : "/XianXu.github.io"
+repository               : "huanhongxin/XianXu.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
@@ -304,7 +304,6 @@ plugins:
   - jekyll-sitemap
   - jekyll-redirect-from
   - jemoji
-  - jekyll-multiple-languages-plugin
 # Mimic GitHub Pages with --safe
 whitelist:
   - jekyll-feed

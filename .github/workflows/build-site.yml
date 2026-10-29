@@ -1,0 +1,25 @@
+name: Build website preview
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Build with GitHub Pages Jekyll
+        uses: actions/jekyll-build-pages@v1
+      - name: Save built website for review
+        uses: actions/upload-artifact@v4
+        with:
+          name: website-preview
+          path: _site
+          retention-days: 3
