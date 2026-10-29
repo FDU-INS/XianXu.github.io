@@ -12,9 +12,9 @@ title                    : "许闲"
 title_separator          : "-"
 name                     : &name "许闲"
 description              : &description "许闲，德国卡尔斯鲁厄理工学院经济学博士，复旦大学教授、博士生导师。"
-url                      : "https://huanhongxin.github.io"
-baseurl                  : "/XianXu.github.io"
-repository               : "huanhongxin/XianXu.github.io"
+url                      : "http://xianxu-econ.com"
+baseurl                  : ""
+repository               : "FDU-INS/XianXu.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
