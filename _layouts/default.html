@@ -1,0 +1,26 @@
+---
+layout: compress
+---
+
+{% include base_path %}
+
+<!doctype html>
+<html lang="{{ page.lang | default: 'zh-CN' }}" class="no-js">
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+  </head>
+
+  <body class="lang-{{ page.lang | default: 'zh' }} no-site-footer">
+
+    {% if page.home_intro %}{% include home-intro.html %}{% endif %}
+    {% include browser-upgrade.html %}
+    {% include masthead.html %}
+
+    {{ content }}
+
+    {% include scripts.html %}
+    {% include back-to-top.html %}
+
+  </body>
+</html>

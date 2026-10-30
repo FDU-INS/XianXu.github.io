@@ -1,0 +1,5 @@
+<!-- start custom footer snippets -->
+{% assign interface_language = page.lang | default: 'zh' %}
+{% assign interface = site.data.interface[interface_language] | default: site.data.interface.zh %}
+<a href="{{ interface.sitemap_url | relative_url }}">{{ interface.sitemap }}</a>
+<!-- end custom footer snippets -->

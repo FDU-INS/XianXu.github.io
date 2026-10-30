@@ -1,0 +1,27 @@
+main:
+  - title: "个人履历"
+    url: /CV.html
+
+  - title: "学术著作"
+    url: /Publications
+
+  - title: "科研项目"
+    url: /Research-Programme
+
+  - title: "大会发言"
+    url: /Conference-Presentations
+
+  - title: "教学课程"
+    url: /Teaching
+
+en:
+  - title: "CV"
+    url: /en/CV.html
+  - title: "Publications"
+    url: /en/Publications.html
+  - title: "Research Projects"
+    url: /en/Research-Programme.html
+  - title: "Conference Talks"
+    url: /en/Conference-Presentations.html
+  - title: "Teaching"
+    url: /en/Teaching.html

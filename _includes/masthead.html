@@ -1,0 +1,32 @@
+{% include base_path %}
+{% assign interface_language = page.lang | default: 'zh' %}
+{% assign interface = site.data.interface[interface_language] | default: site.data.interface.zh %}
+{% assign navigation = site.data.navigation[interface_language] | default: site.data.navigation.main %}
+{% assign current_navigation_key = page.url | remove: '.html' | remove: '/' %}
+{% assign home_navigation_key = interface.home_url | remove: '.html' | remove: '/' %}
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav" aria-label="{{ interface.navigation }}">
+        <button type="button" aria-label="{{ interface.menu }}"><div class="navicon"></div></button>
+        <ul class="visible-links">
+          <li class="masthead__menu-item masthead__menu-item--lg"><a href="{{ interface.home_url | relative_url }}"{% if current_navigation_key == home_navigation_key %} aria-current="page"{% endif %}>{{ interface.home }}</a></li>
+          {% for link in navigation %}
+            {% if link.url contains 'http' %}
+              {% assign domain = '' %}
+              {% else %}
+              {% assign domain = base_path %}
+            {% endif %}
+            {% assign link_navigation_key = link.url | remove: '.html' | remove: '/' %}
+            <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}"{% if current_navigation_key == link_navigation_key %} aria-current="page"{% endif %}>{{ link.title }}</a></li>
+          {% endfor %}
+        </ul>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+    {% if page.translation_url %}
+      <a class="language-switch" href="{{ page.translation_url | relative_url }}" lang="{{ interface.switch_lang }}" hreflang="{{ interface.switch_lang }}" aria-label="{{ interface.switch_accessible }}">{{ interface.switch_label }}</a>
+    {% endif %}
+  </div>
+</div>

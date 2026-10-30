@@ -1,0 +1,27 @@
+<div class="home-intro" id="home-intro" role="dialog" aria-modal="true" aria-labelledby="home-intro-title" aria-describedby="home-intro-english" tabindex="-1" hidden>
+  <svg class="home-intro__filters" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="0" height="0">
+    <defs>
+      <filter id="home-intro-fudan-blue" color-interpolation-filters="sRGB" x="0" y="0" width="100%" height="100%">
+        <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -1.0869565 0 0 0 1.0434783" result="ink" />
+        <feComposite in="ink" in2="SourceAlpha" operator="in" result="mask" />
+        <feFlood flood-color="#0e419c" result="blue" />
+        <feComposite in="blue" in2="mask" operator="in" />
+      </filter>
+    </defs>
+  </svg>
+  <div class="home-intro__message">
+    <div class="home-intro__logos" role="group" aria-label="复旦大学与复旦风保标识">
+      <span class="home-intro__seal home-intro__seal--university">
+        <img src="{{ '/images/branding/fudan-official-original.png' | relative_url }}" width="2267" height="1661" alt="复旦大学校徽" decoding="sync" fetchpriority="high">
+      </span>
+      <span class="home-intro__seal home-intro__seal--insurance">
+        <img src="{{ '/images/branding/fudan-insurance-enhanced.webp' | relative_url }}" width="1254" height="1254" alt="复旦风保标识（Fudan Insurance 1919）" decoding="sync" fetchpriority="high">
+      </span>
+    </div>
+    <p class="home-intro__title" id="home-intro-title"><span>中国保险</span><span>复旦之声</span></p>
+    <p class="home-intro__english" id="home-intro-english" lang="en">China's Insurance, Fudan's Voice</p>
+    <div class="home-intro__rule" aria-hidden="true"></div>
+  </div>
+  <button class="home-intro__skip" type="button">跳过</button>
+</div>
+<script src="{{ '/assets/js/home-intro.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>

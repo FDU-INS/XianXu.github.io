@@ -1,0 +1,269 @@
+@font-face {
+  font-family: "XianXu Microsoft YaHei";
+  src: local("Microsoft YaHei"), local("微软雅黑"), local("MicrosoftYaHei");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "XianXu Microsoft YaHei";
+  src: local("Microsoft YaHei Bold"), local("微软雅黑 Bold"), local("MicrosoftYaHei-Bold");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  --site-text-font: "XianXu Microsoft YaHei", "Microsoft YaHei", "微软雅黑", sans-serif;
+}
+
+body.no-site-footer {
+  margin-bottom: 0;
+  padding-bottom: 2rem;
+}
+
+body,
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6,
+body p,
+body li,
+body a,
+body strong,
+body b,
+body em,
+body small,
+body table,
+body th,
+body td,
+body dt,
+body dd,
+body caption,
+body figcaption,
+body label,
+body button,
+body input,
+body select,
+body textarea,
+.masthead__inner-wrap,
+.sidebar,
+.author__urls-wrapper,
+.page,
+.page__content,
+.page__content .word-intro,
+.archive,
+.page__footer,
+.page__footer-copyright {
+  font-family: var(--site-text-font) !important;
+}
+
+.page__content,
+.archive {
+  color: #000;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+.page__content p,
+.page__content li,
+.archive p,
+.archive li,
+.archive td,
+.archive th {
+  color: #000;
+  font-size: 1rem;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.archive .cv-appointments td,
+.archive .cv-appointments th {
+  text-align: justify;
+}
+
+.page__content a,
+.page__content a:visited,
+.page__content a:hover,
+.archive a,
+.archive a:visited,
+.archive a:hover {
+  color: #000;
+  overflow-wrap: anywhere;
+}
+
+.page__content a[href^="mailto:"],
+.page__content a[href^="mailto:"]:visited,
+.archive a[href^="https://www.icourse163.org/"],
+.archive a[href^="https://www.icourse163.org/"]:visited,
+.archive .publication-list a,
+.archive .publication-list a:visited {
+  color: #2f7f93;
+}
+
+.page__content a[href^="mailto:"]:hover,
+.page__content a[href^="mailto:"]:active,
+.archive a[href^="https://www.icourse163.org/"]:hover,
+.archive a[href^="https://www.icourse163.org/"]:active,
+.archive .publication-list a:hover,
+.archive .publication-list a:active {
+  color: #235f6e;
+}
+
+.word-color-0070c0,
+.word-color-7030a0 {
+  color: #000;
+}
+
+.masthead__menu a,
+.sidebar,
+.author__name,
+.page__title,
+.page__content h2,
+.archive > h2,
+.page__footer,
+.page__footer-copyright {
+  color: #000;
+}
+
+.page__content h2,
+.archive > h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.35;
+  text-decoration: none;
+  border: 0;
+  padding-bottom: 0;
+}
+
+/* Keep the same section rhythm across prose, lists and CV tables. */
+.page__content > h2,
+.archive > h2 {
+  margin: 2.25rem 0 0.8rem;
+}
+
+.archive > .page__title + h2 {
+  margin-top: 1.5rem;
+}
+
+.page__content > h2 + p,
+.page__content > h2 + ul,
+.page__content > h2 + ol,
+.archive > h2 + p,
+.archive > h2 + ul,
+.archive > h2 + ol,
+.archive > h2 + table {
+  margin-top: 0;
+}
+
+.archive > .cv-appointments {
+  margin-bottom: 0;
+}
+
+/* English stays justified; allow dictionary-based breaks before stretching gaps. */
+.lang-en .page__content p,
+.lang-en .page__content li,
+.lang-en .archive p,
+.lang-en .archive li,
+.lang-en .archive td {
+  word-break: normal;
+  overflow-wrap: break-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  hyphenate-limit-chars: 8 3 3;
+  hyphenate-limit-lines: 2;
+  text-wrap: pretty;
+}
+
+.sidebar .author__identity {
+  display: table-cell;
+  width: 96px;
+  vertical-align: top;
+}
+
+.sidebar .author__identity .author__avatar {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.sidebar .author__identity .author__content {
+  display: block;
+  width: 100%;
+  padding: 0;
+}
+
+.sidebar .author__name {
+  margin: 0.55rem 0 1.3rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+}
+
+@media (min-width: 1200px) {
+  .sidebar .author__identity {
+    display: block;
+    width: 175px;
+    max-width: 100%;
+  }
+}
+
+.masthead__inner-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.masthead__menu {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.masthead .greedy-nav {
+  min-width: 0;
+}
+
+.language-switch {
+  flex: 0 0 auto;
+  padding: 0.35rem 0.7rem;
+  border: 1px solid #b8b8b8;
+  border-radius: 0.3rem;
+  color: #000;
+  font-size: 0.85rem;
+  font-weight: 700;
+  line-height: 1.8;
+  white-space: nowrap;
+}
+
+.language-switch:visited,
+.language-switch:hover {
+  color: #000;
+}
+
+.language-switch:hover {
+  background: #f2f2f2;
+}
+
+.language-switch:focus-visible {
+  outline: 2px solid #2f7f93;
+  outline-offset: 3px;
+}
+
+.lang-en .cv-appointments td:last-child {
+  white-space: normal;
+}
+
+.lang-en .cv-appointments td {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 47.99em) {
+  .lang-en .cv-appointments tr {
+    grid-template-columns: minmax(0, 1fr) 6.5em;
+  }
+}

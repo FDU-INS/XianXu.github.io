@@ -1,0 +1,177 @@
+html.home-intro-active {
+  overflow: hidden;
+}
+
+.home-intro {
+  --fudan-blue: #0e419c;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  background: #fff;
+  color: var(--fudan-blue);
+  opacity: 1;
+  visibility: visible;
+  outline: none;
+  transition: opacity 650ms ease, visibility 0s 650ms;
+}
+
+.home-intro[hidden] {
+  display: none;
+}
+
+.home-intro.is-leaving {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.home-intro__filters {
+  position: absolute;
+  pointer-events: none;
+}
+
+.home-intro__message {
+  width: 100%;
+  max-width: 54rem;
+  text-align: center;
+  animation: intro-phrase-enter 600ms ease-out both;
+}
+
+.home-intro__logos {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin: 0 auto 2rem;
+}
+
+.home-intro__seal {
+  position: relative;
+  display: block;
+  flex: 0 0 132px;
+  width: 132px;
+  height: 132px;
+  overflow: hidden;
+}
+
+.home-intro__seal img {
+  position: absolute;
+  filter: url(#home-intro-fudan-blue);
+  max-width: none !important;
+  height: auto;
+}
+
+.home-intro__seal--university img {
+  top: 0;
+  left: 0;
+  width: 307.1816%;
+}
+
+.home-intro__seal--insurance img {
+  top: -9.1509%;
+  left: -7.1363%;
+  width: 114.7301%;
+  height: 118.3019%;
+}
+
+.home-intro__title {
+  margin: 0;
+  color: var(--fudan-blue);
+  font-family: var(--site-text-font);
+  font-size: clamp(1.75rem, 4vw, 3.25rem);
+  font-weight: 700;
+  line-height: 1.8;
+  letter-spacing: 0.08em;
+}
+
+.home-intro__title span {
+  display: inline-block;
+}
+
+.home-intro__title span + span {
+  margin-left: 0.35em;
+}
+
+.home-intro__english {
+  margin: 0.65rem 0 0;
+  color: var(--fudan-blue);
+  font-size: clamp(0.9rem, 1.5vw, 1.15rem);
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+
+.home-intro__rule {
+  width: 3.5rem;
+  height: 1px;
+  margin: 1.2rem auto 0;
+  background: var(--fudan-blue);
+  opacity: 0.2;
+}
+
+.home-intro__skip {
+  position: absolute;
+  right: max(1.5rem, env(safe-area-inset-right));
+  bottom: max(1.5rem, env(safe-area-inset-bottom));
+  min-width: 3rem;
+  min-height: 2.75rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #c7d4eb;
+  border-radius: 0.25rem;
+  background: #fff;
+  color: var(--fudan-blue);
+  font-size: 0.85rem;
+  line-height: 1.8;
+  cursor: pointer;
+}
+
+.home-intro__skip:hover {
+  background: #f3f6fc;
+}
+
+.home-intro__skip:focus-visible {
+  outline: 2px solid var(--fudan-blue);
+  outline-offset: 3px;
+}
+
+@keyframes intro-phrase-enter {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 36em) {
+  .home-intro__logos {
+    gap: 20px;
+    margin-bottom: 1.75rem;
+  }
+  .home-intro__seal {
+    flex-basis: 100px;
+    width: 100px;
+    height: 100px;
+  }
+  .home-intro__title {
+    font-size: 2rem;
+  }
+  .home-intro__title span {
+    display: block;
+  }
+  .home-intro__title span + span {
+    margin-left: 0;
+  }
+  .home-intro__english {
+    max-width: 19rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-intro,
+  .home-intro__message {
+    animation: none;
+    transition: none;
+  }
+}

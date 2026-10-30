@@ -1,0 +1,156 @@
+---
+---
+
+/*
+ *    Minimal Mistakes Jekyll Theme
+ *
+ *  - Michael Rose
+ *  - mademistakes.com
+ *  - https://twitter.com/mmistakes
+ *
+*/
+
+@import "vendor/breakpoint/breakpoint"; // media query mixins
+@import "variables";
+@import "mixins";
+@import "vendor/susy/susy";
+
+@import "reset";
+@import "base";
+
+@import "utilities";
+@import "animations";
+@import "tables";
+@import "buttons";
+@import "notices";
+@import "masthead";
+@import "navigation";
+@import "footer";
+@import "syntax";
+
+@import "forms";
+
+@import "page";
+@import "archive";
+@import "sidebar";
+
+@import "vendor/font-awesome/fontawesome";
+@import "vendor/font-awesome/solid";
+@import "vendor/font-awesome/brands";
+@import "vendor/magnific-popup/magnific-popup";
+@import "print";
+
+#main h2[id] {
+  scroll-margin-top: 5rem;
+}
+
+.page__content h2,
+.archive > h2 {
+  font-family: $header-font-family;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.35;
+  text-decoration: none;
+  border: 0;
+  padding-bottom: 0;
+}
+
+.page__content p,
+.page__content li,
+.archive p,
+.archive li {
+  text-align: justify;
+}
+
+.archive .book-cover {
+  display: block;
+  width: 220px;
+  max-width: 100%;
+  height: auto;
+  margin-top: 0.75em;
+}
+
+.archive .publication-list > li {
+  margin-bottom: 1em;
+}
+
+.page__content .word-intro {
+  font-family: "Microsoft YaHei", "微软雅黑", sans-serif;
+}
+
+.page__content .word-intro p {
+  text-align: justify;
+  text-indent: 2em;
+}
+
+.page__content .word-intro .intro-blue {
+  color: #000;
+}
+
+.archive .cv-appointments {
+  width: 100%;
+  max-width: 43em;
+  table-layout: fixed;
+  font-size: 1em;
+  line-height: inherit;
+  border: 0;
+  margin-bottom: 2em;
+
+  .cv-date-column { width: 10.5em; }
+  .cv-institution-column { width: auto; }
+  .cv-role-column { width: 8em; }
+
+  td, th {
+    border: 0;
+    background: transparent;
+    vertical-align: top;
+    padding: 0.3em 1em 0.3em 0;
+    text-align: left;
+  }
+
+  td:first-child {
+    padding-left: 1em;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+
+  td:nth-child(2) { text-align: justify; }
+  td:last-child { white-space: nowrap; padding-right: 0; }
+}
+
+.archive .cv-editorial {
+  td:first-child {
+    white-space: normal;
+    text-align: justify;
+    font-variant-numeric: normal;
+  }
+  td:last-child { white-space: normal; }
+}
+
+@media (max-width: 47.99em) {
+  .archive .cv-appointments {
+    display: block;
+    colgroup { display: none; }
+    tbody { display: block; }
+    tr {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 4em;
+      column-gap: 1em;
+      margin-bottom: 1em;
+    }
+    td { display: block; padding: 0; }
+    td:first-child {
+      grid-column: 1 / -1;
+      padding-left: 0;
+      margin-bottom: 0.2em;
+    }
+  }
+
+  .archive .cv-editorial {
+    tr { grid-template-columns: minmax(0, 1fr) 7em; }
+    td:first-child {
+      grid-column: auto;
+      margin-bottom: 0;
+    }
+  }
+}

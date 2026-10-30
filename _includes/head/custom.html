@@ -1,0 +1,39 @@
+{% include base_path %}
+
+<!-- start custom head snippets -->
+
+<link rel="manifest" href="{{ base_path }}/images/manifest.json?v=M44lzPylqQ">
+<link rel="mask-icon" href="{{ base_path }}/images/safari-pinned-tab.svg?v=M44lzPylqQ" color="#000000">
+<link rel="shortcut icon" href="{{ '/images/favicon.ico' | relative_url }}">
+<meta name="msapplication-TileColor" content="#000000">
+<meta name="msapplication-TileImage" content="{{ base_path }}/images/mstile-144x144.png?v=M44lzPylqQ">
+<meta name="msapplication-config" content="{{ base_path }}/images/browserconfig.xml?v=M44lzPylqQ">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="{{ base_path }}/assets/css/academicons.css"/>
+
+
+<!-- Support for MatJax -->
+<script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<!-- end custom head snippets -->
+
+<link rel="stylesheet" href="{{ base_path }}/assets/css/site-typography.css?v={{ site.time | date: '%s' }}">
+<link rel="stylesheet" href="{{ '/assets/css/academic-refresh.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+{% if page.home_intro %}
+  <link rel="stylesheet" href="{{ '/assets/css/home-intro.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+  <link rel="preload" as="image" href="{{ '/images/branding/fudan-official-original.png' | relative_url }}">
+  <link rel="preload" as="image" href="{{ '/images/branding/fudan-insurance-enhanced.webp' | relative_url }}">
+{% endif %}
+
+{% if page.translation_url %}
+  {% if page.lang == 'en' %}
+    <link rel="alternate" hreflang="en" href="{{ page.url | absolute_url }}">
+    <link rel="alternate" hreflang="zh-CN" href="{{ page.translation_url | absolute_url }}">
+    <link rel="alternate" hreflang="x-default" href="{{ page.translation_url | absolute_url }}">
+  {% else %}
+    <link rel="alternate" hreflang="zh-CN" href="{{ page.url | absolute_url }}">
+    <link rel="alternate" hreflang="en" href="{{ page.translation_url | absolute_url }}">
+    <link rel="alternate" hreflang="x-default" href="{{ page.url | absolute_url }}">
+  {% endif %}
+{% endif %}

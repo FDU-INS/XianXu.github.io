@@ -1,0 +1,36 @@
+zh:
+  site_title: "许闲"
+  home: "主页"
+  home_url: /
+  name: "许闲"
+  employer: "复旦大学"
+  academic_links: "学术链接"
+  navigation: "主导航"
+  menu: "展开或收起导航菜单"
+  switch_label: "English"
+  switch_accessible: "Switch to English"
+  switch_lang: en
+  sitemap: "站点导航"
+  sitemap_url: /sitemap/
+  follow: "关注："
+  feed: "订阅"
+  powered_by: "技术支持："
+  updated: "最近更新"
+en:
+  site_title: "Xian Xu"
+  home: "Home"
+  home_url: /en/
+  name: "Dr. Xian Xu"
+  employer: "Fudan University"
+  academic_links: "Academic links"
+  navigation: "Main navigation"
+  menu: "Toggle navigation menu"
+  switch_label: "中文"
+  switch_accessible: "切换为中文"
+  switch_lang: zh-CN
+  sitemap: "Sitemap"
+  sitemap_url: /en/sitemap/
+  follow: "Follow:"
+  feed: "Feed"
+  powered_by: "Powered by"
+  updated: "Last updated"
