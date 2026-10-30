@@ -8,8 +8,23 @@
 {% endif %}
 {% assign seo_url = seo_url | default: site.github.url %}
 
-{% if page.title %}
-  {% assign seo_title = page.title | append: " " | append: site.title_separator | append: " " | append: interface.site_title %}
+{% assign tab_section = page.title %}
+{% assign tab_page_key = page.url | remove: '.html' | remove: '/' %}
+{% assign tab_home_key = interface.home_url | remove: '.html' | remove: '/' %}
+{% assign tab_navigation = site.data.navigation[interface_language] | default: site.data.navigation.main %}
+{% if tab_page_key == tab_home_key %}
+  {% assign tab_section = interface.home %}
+{% else %}
+  {% for tab_link in tab_navigation %}
+    {% assign tab_link_key = tab_link.url | remove: '.html' | remove: '/' %}
+    {% if tab_page_key == tab_link_key %}
+      {% assign tab_section = tab_link.title %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+{% if tab_section %}
+  {% assign seo_title = interface.site_title | append: site.title_separator | append: tab_section %}
 {% endif %}
 
 {% if seo_title %}
